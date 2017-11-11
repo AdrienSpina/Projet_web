@@ -1,0 +1,37 @@
+/* feuille de style pour index.php */
+
+html,body{
+    width : 100%;
+    background: url(../../images/background.jpg) no-repeat center fixed; 
+    background-size: cover;
+}
+#menu form{
+    margin-left: 10%;
+}
+#contenu{
+    margin-top: 3%;
+    background-color: white;
+    padding-top: 2%;
+    padding-bottom: 2%
+}
+#titre{
+    color:#c82333;
+    text-align: center;
+    margin-bottom: 2%;
+}
+#formulaireconnexion{
+    margin-bottom: 2%;
+}
+#piedpage{
+    clear: both;
+    margin-top: 3%;
+}
+#piedpage .lead{
+    text-align : center;
+}
+.jumbotron{
+    background-color: white;
+}   
+.txtcentrer{
+    text-align: center;
+}

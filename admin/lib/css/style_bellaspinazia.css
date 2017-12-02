@@ -5,6 +5,9 @@ html,body{
     background: url(../../images/background.jpg) no-repeat center fixed; 
     background-size: cover;
 }
+.row{
+    margin-bottom: 3%;
+}
 #menu form{
     margin-left: 10%;
 }
@@ -12,15 +15,24 @@ html,body{
     margin-top: 3%;
     background-color: white;
     padding-top: 2%;
-    padding-bottom: 2%
+    padding-bottom: 3%;
 }
 #titre{
     color:#c82333;
     text-align: center;
     margin-bottom: 2%;
 }
+#formulaireinscription{
+    border : 2px solid;
+    border-radius: 12px;
+    padding : 2%;
+    margin : 2%;
+}
 #formulaireconnexion{
     margin-bottom: 2%;
+}
+#formulairecontact{
+    margin-right:2%;
 }
 #piedpage{
     clear: both;
@@ -34,4 +46,33 @@ html,body{
 }   
 .txtcentrer{
     text-align: center;
+}
+.carousel-inner{
+    border-style : solid;
+}
+h4{
+    text-align: center;
+}
+#prod{
+    border-bottom: 3px solid red;
+    margin : 2%;
+    padding-bottom: 2%;
+    padding-right: -4%;
+}
+.txtVert{
+    color : green;
+}
+.bord{
+    border : 10px solid;
+    border-radius: 12px;
+    margin : 2%;
+}
+.bord2{
+    border : 5px solid green;
+    border-radius: 6px;
+    margin : 4%;
+    padding : 1%;
+}
+iframe{
+    width: 100%;
 }

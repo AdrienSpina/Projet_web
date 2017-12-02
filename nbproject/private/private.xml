@@ -3,9 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/wamp/www/BellaSpinazia/pages/deco.php</file>
             <file>file:/C:/wamp/www/BellaSpinazia/index.php</file>
-            <file>file:/C:/wamp/www/BellaSpinazia/pages/accueil.php</file>
-            <file>file:/C:/wamp/www/BellaSpinazia/admin/lib/css/style_bellaspinazia.css</file>
+            <file>file:/C:/wamp/www/BellaSpinazia/admin/lib/php/classes/Pan_prod.class.php</file>
+            <file>file:/C:/wamp/www/BellaSpinazia/pages/panier.php</file>
+            <file>file:/C:/wamp/www/BellaSpinazia/pages/produits.php</file>
+            <file>file:/C:/wamp/www/BellaSpinazia/admin/lib/php/classes/Pan_prodDB.class.php</file>
         </group>
     </open-files>
 </project-private>

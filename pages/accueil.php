@@ -46,4 +46,19 @@ $texte = $info->getInfoClient("accueil");
         </div> 
     </div>
 </div>
+<br/>
+<div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <h4>Progression du site</h4>
+    </div>
+</div>
+<br/>
+<div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="progress col-sm-8" >
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
+    </div>
+</div>
 

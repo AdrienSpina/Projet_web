@@ -25,7 +25,8 @@ $(document).ready(function () {
             login: "required",
             mp: "required",
             mp2: {
-                equalTo: "#mp"
+                equalTo: "#mp",
+                required: true
             },
             tel: {
                 required: true,

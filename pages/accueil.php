@@ -58,7 +58,7 @@ $texte = $info->getInfoClient("accueil");
     <div class="col-sm-2">
     </div>
     <div class="progress col-sm-8" >
-        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"></div>
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
     </div>
 </div>
 

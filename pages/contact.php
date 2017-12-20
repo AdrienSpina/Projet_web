@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-sm-2"></div>
+    <div class="col-sm-1"></div>
     <div class="col-sm-8">
         <h1>Vous avez une suggestion ?</h1>
     </div>
@@ -21,9 +21,6 @@
             }
             ?>
         </form>
-    </div>
-    <div class="col-sm-6 embed-responsive-1by1">
-        <icon src="../admin/images/idea.png"/>
     </div>
 </div>
 <div class="row bord">

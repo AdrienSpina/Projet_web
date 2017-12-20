@@ -7,6 +7,9 @@ if (isset($_GET['inscription'])) {
     } else {
         $client = new ClientDB($cnx);
         $client->addClient($_GET);
+        ?>
+        <meta http-equiv = "refresh": content = "0;url=index.php?page=connexion.php">
+        <?php
     }
 }
 ?>

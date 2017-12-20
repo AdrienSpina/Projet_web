@@ -13,12 +13,17 @@ if (isset($_GET['connexion'])) {
             $_SESSION['client'] = $log[0]->ID_CLIENT; // quand on se connecte on recupere l'id du client
             $panier = new PanierDB($cnx);
             $recup_panier = $panier->getPanier($_SESSION['client']); // on verifie si le client possede bien un panier
-            if (is_null($recup_panier)) {
+            if (empty($recup_panier)) {
                 $panier->create_Panier($_SESSION['client']); // si le panier n'existe pas on en crée un
-                $recup_panier = $panier->getPanier($_SESSION['client']); // on recupere le panier que l'on vient de creer
-                $_SESSION['panier'] = $recup_panier[0]->id_panier; // on recupere l'id du panier
+                $recup_panier2 = $panier->getPanier($_SESSION['client']); // on recupere le panier que l'on vient de creer
+                $_SESSION['panier'] = $recup_panier2[0]->id_panier; // on recupere l'id du panier
             } else {
                 $_SESSION['panier'] = $recup_panier[0]->id_panier; // on recuper l'id du panier
+                $com = new Vue_commandeDB($cnx);
+                $recup_com = $com->getRecup_commande($_SESSION['client']); // on verifie si le client a deja commandé sur le site
+                if (isset($recup_com)) {
+                    $_SESSION['com'] = 1;
+                }
             }
             ?>
             <meta http-equiv = "refresh": content = "0;url=index.php?page=accueil.php">

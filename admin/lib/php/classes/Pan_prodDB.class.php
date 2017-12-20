@@ -43,5 +43,43 @@ class Pan_prodDB extends Pan_prod {
             print $e->getMessage();
         }
     }
+    public function delete_Produit($id_pan, $id_prod) {
+        $query = "DELETE FROM PAN_PROD WHERE id_panier = :id AND id_produit = :id2";
 
+        try {
+            $resultset = $this->_db->prepare($query);
+            $resultset->bindValue(':id', $id_pan, PDO::PARAM_STR);
+            $resultset->bindValue(':id2', $id_prod, PDO::PARAM_STR);
+            $resultset->execute();
+            //$retour = $resultset->fetchColumn(0);
+            //return $retour;
+        } catch (PDOException $e) {
+            print "<br/>Echec de la suppression";
+            print $e->getMessage();
+        }
+    }
+    
+        public function vide_Panier($id) {
+        $query = "DELETE FROM PAN_PROD WHERE id_panier = :id";
+
+        try {
+            $resultset = $this->_db->prepare($query);
+            $resultset->bindValue(':id', $id, PDO::PARAM_STR);
+            $resultset->execute();
+            //$retour = $resultset->fetchColumn(0);
+            //return $retour;
+        } catch (PDOException $e) {
+            print "<br/>Echec du vide-panier";
+            print $e->getMessage();
+        }
+    }
+       public function updatePan_prod($champ, $nouveau, $id) {
+        try {
+            $query = "UPDATE PAN_PROD set " . $champ . " = '" . $nouveau . "' where id_pan_prod ='" . $id . "'";
+            $resultset = $this->_db->prepare($query);
+            $resultset->execute();
+        } catch (PDOException $e) {
+            print $e->getMessage();
+        }
+    }
 }

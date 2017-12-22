@@ -27,7 +27,7 @@ if (isset($liste)) {
             <div class="row" id="prod">
                 <div class="col-sm-1"></div>
                 <div class="col-sm-3">
-                    <img src="admin/images/<?php print $liste[$i]['image']; ?>" class="img-fluid" alt="Produit"/>
+                    <div class="imach"><img src="admin/images/<?php print $liste[$i]['image']; ?>" class="img-fluid" alt="Produit"/></div>
                 </div>
                 <div class="col-sm-3 text-center">                        
                     <br/>

@@ -8,7 +8,7 @@ $cnx = Connexion::getInstance($dsn, $user, $pass);
 // recuperation des données
 $obj = new Vue_ProduitDB($cnx);
 $liste = $obj->getVue_produit();
-$nbrG = count($liste);
+$nbrP = count($liste);
 
 require '../lib/php/fpdf/fpdf/fpdf.php';
 
@@ -41,7 +41,11 @@ $pdf->cell(5, 1, utf8_decode('Image'), 0, 0, 'L');
 
 $pdf->SetFont('Arial', '',12);
 $y = $y +2;
-for($i=0;$i<$nbrG;$i++){
+for($i=0;$i<$nbrP;$i++){
+    if($i != 0 && $i%11 == 0){
+        $pdf->AddPage();
+        $y = 2;
+    }
     $pdf->setXY($x,$y);
     $pdf->cell(3.5,1,$liste[$i]['nom'],0,0,'C');
     $pdf->SetXY($x+8,$y);

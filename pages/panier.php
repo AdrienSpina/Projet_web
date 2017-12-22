@@ -1,7 +1,5 @@
 <?php
-if (!isset($_SESSION['client'])) {
-    print "Pas authentifié";
-} else {
+require './lib/php/verifier_client.php';
     if (!isset($_SESSION['panier'])) {
         print "pas de panier";
     } else {
@@ -74,10 +72,19 @@ if (!isset($_SESSION['client'])) {
                         </div>
                         <div class="col-sm-2">
                             <br/>
-                            <br/>
-                            <span contenteditable="true" name="quantite" class="ecart" id="<?php print $liste_pan[$i]['id_pan_prod']; ?>">
-                                <b><?php print $liste_pan[$i]['quantite']; ?></b>
-                            </span>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    Quantité
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <br/>
+                                    <span contenteditable="true" name="quantite" class="ecart" id="<?php print $liste_pan[$i]['id_pan_prod']; ?>">
+                                        <b><?php print $liste_pan[$i]['quantite']; ?></b>
+                                    </span>
+                                </div>
+                            </div>
                         </div>   
                         <div class="col-sm-1">
                             <br/>
@@ -102,7 +109,7 @@ if (!isset($_SESSION['client'])) {
                     <div class="col-sm-5">
                     </div>
                     <div class="col-sm-2">
-                        MONTANT TOTAL : <b><?php print $total[0]; ?>€</b>
+                        MONTANT TOTAL : <b><span id="montant"><?php print $total; ?></span>€</b>
                     </div>
                     <div class="col-sm-2">
                         <form>
@@ -120,5 +127,4 @@ if (!isset($_SESSION['client'])) {
             <?php
         }
     }
-}
 ?>

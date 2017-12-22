@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    //on cache le bouton de modification. Il apparait si le js est inactif
+    $("#modifProd").hide(); 
     //code pour le tableau éditable
     $("span[id]").click(function () {
         /*

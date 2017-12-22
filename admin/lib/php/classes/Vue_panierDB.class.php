@@ -43,7 +43,7 @@ class Vue_panierDB {
             //$data = $resultset->fetchAll();
             //var_dump($data);
             $data = $resultset->fetch();
-            return $data;
+            return $data[0];
         } catch (PDOException $e) {
             print "Erreur";
         }

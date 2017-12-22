@@ -85,6 +85,7 @@ iframe{
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    margin: 0 auto;
 }
 #products td, #products th {
     border: 1px solid #ddd;

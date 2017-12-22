@@ -11,10 +11,15 @@ $texte = $info->getInfoClient("accueil");
 <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-4">
-        <h1 class="txtcentrer"><span class="badge badge-dark">Actualités</span></h1><br/>
-        <?php
-        print $texte[0]->TEXTE;
-        ?>
+        <h1><span class="badge badge-dark">Actualités</span></h1><br/>
+        <p><?php
+            print $texte[0]->TEXTE;
+            ?></p>
+        <br/>
+        <h1><span class="badge badge-success">Qui sommes-nous ?</span></h1><br/>
+        <p><?php
+            print $texte[1]->TEXTE;
+            ?></p>
     </div>
     <div class="col-sm-6">
         <div id="gt_carousel" class="carousel slide" data-ride="carousel">

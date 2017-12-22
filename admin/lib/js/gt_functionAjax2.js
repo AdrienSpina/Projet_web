@@ -34,10 +34,12 @@ $(document).ready(function () {
                 var retour = $.ajax({
                     type: 'GET',
                     data: parametre,
-                    dataType: "text",
+                    dataType: "json",
                     url: "./admin/lib/php/ajax/AjaxUpdatePanier.php",
                     success: function (data) {
                         console.log("success");
+                        console.log(data['total']);
+                        $('#montant').html(data['total']);
                     }
                 });
                 retour.fail(function (jqXHR, textStatus, errorThrown) {

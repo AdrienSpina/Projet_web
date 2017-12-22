@@ -1,7 +1,5 @@
 <?php
-if (!isset($_SESSION['client'])) {
-    print "Pas authentifié";
-} else {
+require './lib/php/verifier_client.php';
     // pour la suite on utilise vue_commandeDB pour afficher les commandes dans une boucle et on utilise la vue pour les paniers inactifs dans une boucle imbriquée
     // getVue_panier_inactif dans la vue_panierDB
     $com = new Vue_commandeDB($cnx);
@@ -68,4 +66,3 @@ if (!isset($_SESSION['client'])) {
         <div class="col-sm-12">Erreur</div>
         <?php
     }
-}
